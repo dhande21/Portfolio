@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dhande Sominath | Cyber Security & SOC Analyst</title>
+
+    <meta name="description"
+          content="Portfolio of Dhande Sominath, BSc Computer Science student preparing for SOC Analyst and Cyber Security roles.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #050505;
+            --bg-light: #0b0b0b;
+            --card: rgba(255,255,255,0.045);
+            --gold: #d4af37;
+            --gold-light: #f4d77a;
+            --gold-dark: #9b7a16;
+            --white: #f5f5f5;
+            --gray: #a7a7a7;
+            --border: rgba(212,175,55,0.25);
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(212,175,55,0.08), transparent 25%),
+                radial-gradient(circle at 90% 20%, rgba(212,175,55,0.06), transparent 25%),
+                var(--bg);
+
+            color: var(--white);
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gold {
+            color: var(--gold-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: var(--gold-light);
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 5vw, 55px);
+            margin-top: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 650px;
+            margin: 15px auto 0;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+
+            background: rgba(5,5,5,0.75);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        nav {
+            max-width: 1250px;
+            margin: auto;
+            padding: 18px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--gold-light);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+            color: var(--gold-light);
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 130px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero-content small {
+            color: var(--gold-light);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .hero-content h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(50px, 7vw, 85px);
+            line-height: 1.05;
+            margin: 18px 0;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero-content h2 {
+            color: #ddd;
+            font-size: clamp(18px, 3vw, 25px);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: var(--gray);
+            max-width: 650px;
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            border-radius: 50px;
+            border: 1px solid var(--gold);
+            transition: 0.3s;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            color: #050505;
+            box-shadow: 0 10px 30px rgba(212,175,55,0.18);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(212,175,55,0.3);
+        }
+
+        .btn-outline {
+            color: var(--gold-light);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: #050505;
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================
+           PROFILE IMAGE
+        ========================== */
+
+        .profile-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-ring {
+            width: min(380px, 75vw);
+            height: min(380px, 75vw);
+            border-radius: 50%;
+            padding: 10px;
+
+            background:
+                linear-gradient(135deg,
+                    var(--gold-light),
+                    transparent 35%,
+                    var(--gold-dark),
+                    var(--gold-light));
+
+            animation: rotateRing 10s linear infinite;
+
+            box-shadow:
+                0 0 40px rgba(212,175,55,0.15),
+                0 0 100px rgba(212,175,55,0.08);
+        }
+
+        .profile-inner {
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            border-radius: 50%;
+            background: #050505;
+            animation: counterRotate 10s linear infinite;
+        }
+
+        .profile-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgba(212,175,55,0.5);
+        }
+
+        @keyframes rotateRing {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes counterRotate {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+
+        /* =========================
+           INFO STRIP
+        ========================== */
+
+        .info-strip {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 30px 5%;
+            background: rgba(255,255,255,0.015);
+        }
+
+        .info-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            gap: 20px;
+        }
+
+        .info-item h4 {
+            color: var(--gold-light);
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            color: var(--gray);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .about-box {
+            padding: 35px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-box::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: var(--gold);
+            filter: blur(100px);
+            opacity: 0.08;
+            top: -50px;
+            right: -50px;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            color: #ccc;
+        }
+
+        .about-list li:last-child {
+            border-bottom: none;
+        }
+
+        .about-list strong {
+            color: var(--gold-light);
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            padding: 35px 28px;
+            border: 1px solid var(--border);
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.06),
+                rgba(255,255,255,0.015)
+            );
+
+            border-radius: 25px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(212,175,55,0.08);
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(212,175,55,0.1);
+            border: 1px solid var(--border);
+
+            font-size: 27px;
+            color: var(--gold-light);
+            margin-bottom: 25px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .skill-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TECHNICAL SKILLS
+        ========================== */
+
+        .technical {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill-line {
+            margin-bottom: 28px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 9px;
+        }
+
+        .skill-name span:first-child {
+            color: #ddd;
+        }
+
+        .skill-name span:last-child {
+            color: var(--gold-light);
+        }
+
+        .progress {
+            width: 100%;
+            height: 8px;
+            background: #1b1b1b;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+            border-radius: 20px;
+            transition: width 1.8s ease;
+        }
+
+
+        /* =========================
+           SOC SECTION
+        ========================== */
+
+        .soc-section {
+            background:
+                linear-gradient(
+                    rgba(5,5,5,0.88),
+                    rgba(5,5,5,0.96)
+                ),
+                radial-gradient(circle at center, #2a220d, #050505 65%);
+        }
+
+        .soc-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .soc-content h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .soc-content p {
+            color: var(--gray);
+            margin-bottom: 35px;
+        }
+
+        .tool-list {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tool {
+            padding: 10px 18px;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            color: #ddd;
+            background: rgba(255,255,255,0.03);
+            transition: 0.3s;
+        }
+
+        .tool:hover {
+            background: var(--gold);
+            color: #050505;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--gold-dark);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 55px;
+            margin-bottom: 45px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            box-shadow: 0 0 20px var(--gold);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 5px;
+        }
+
+        .timeline-item span {
+            color: var(--gold-light);
+            font-size: 14px;
+        }
+
+        .timeline-item p {
+            color: var(--gray);
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 55px;
+            text-align: center;
+
+            border: 1px solid var(--border);
+            border-radius: 30px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,0.07),
+                    transparent 65%
+                ),
+                rgba(255,255,255,0.02);
+        }
+
+        .contact-box h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .social {
+            padding: 11px 20px;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .social:hover {
+            background: var(--gold);
+            color: #050505;
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 30px 6%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: #777;
+        }
+
+        footer span {
+            color: var(--gold-light);
+        }
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media(max-width: 900px) {
+
+            .hero-container,
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profile-wrapper {
+                order: -1;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 650px) {
+
+            section {
+                padding: 75px 5%;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+
+                flex-direction: column;
+                align-items: center;
+
+                padding: 25px;
+
+                background: rgba(5,5,5,0.97);
+                border-bottom: 1px solid var(--border);
+
+                transform: translateY(-150%);
+                transition: 0.4s;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                padding: 35px 20px;
+            }
+
+            .contact-box h2 {
+                font-size: 35px;
+            }
+
+            .hero-content h1 {
+                font-size: 52px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+                S<span>.</span>
+            </a>
+
+            <div class="menu-btn" id="menuBtn">
+                ☰
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#soc">SOC</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-container">
+
+            <div class="hero-content reveal">
+
+                <small>Computer Science Student</small>
+
+                <h1>
+                    Dhande
+                    <span>Sominath</span>
+                </h1>
+
+                <h2>
+                    Aspiring SOC Analyst • Cyber Security Enthusiast
+                </h2>
+
+                <p>
+                    BSc Computer Science student passionate about
+                    Cyber Security, Computer Networking, Operating Systems,
+                    SQL, Blue Team technologies and Video Editing.
+                    Currently preparing for a career as a SOC Analyst.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#contact" class="btn btn-primary">
+                        Connect With Me
+                    </a>
+
+                    <!-- Put your actual resume file in the same folder -->
+                    <a href="resume.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn btn-outline">
+                        View Resume
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-wrapper reveal">
+
+                <div class="profile-ring">
+
+                    <div class="profile-inner">
+
+                        <!-- Replace profile.jpg with your actual photo -->
+                        <img src="profile.jpg"
+                             alt="Dhande Sominath"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x600/0b0b0b/d4af37?text=Dhande+Sominath';">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INFO
+    ========================== -->
+
+    <div class="info-strip">
+
+        <div class="info-grid">
+
+            <div class="info-item">
+                <h4>Education</h4>
+                <p>BSc Computer Science</p>
+            </div>
+
+            <div class="info-item">
+                <h4>Graduation</h4>
+                <p>2027</p>
+            </div>
+
+            <div class="info-item">
+                <h4>Location</h4>
+                <p>Pune, Maharashtra</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>About Me</span>
+
+                <h2>Building Skills for a Secure Digital Future</h2>
+
+                <p>
+                    My goal is to develop strong technical knowledge
+                    and practical cybersecurity skills.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-text reveal">
+
+                    <h3>
+                        Passionate About
+                        <span class="gold">Technology & Security</span>
+                    </h3>
+
+                    <p>
+                        I am Dhande Sominath, a BSc Computer Science student
+                        from Pune, Maharashtra. I am interested in cybersecurity,
+                        networking, operating systems, databases and modern
+                        security technologies.
+                    </p>
+
+                    <p>
+                        I am currently preparing for a SOC Analyst career,
+                        focusing on Blue Team concepts, security monitoring,
+                        threat detection, log analysis and incident response.
+                    </p>
+
+                    <p>
+                        Alongside cybersecurity, I also enjoy video editing
+                        and creative digital work.
+                    </p>
+
+                </div>
+
+
+                <div class="about-box reveal">
+
+                    <ul class="about-list">
+
+                        <li>
+                            <strong>Name:</strong>
+                            Dhande Sominath
+                        </li>
+
+                        <li>
+                            <strong>Email:</strong>
+                            dhandesominath16@gmail.com
+                        </li>
+
+                        <li>
+                            <strong>Degree:</strong>
+                            BSc Computer Science
+                        </li>
+
+                        <li>
+                            <strong>Graduation:</strong>
+                            2027
+                        </li>
+
+                        <li>
+                            <strong>Location:</strong>
+                            Pune, Maharashtra
+                        </li>
+
+                        <li>
+                            <strong>Career Goal:</strong>
+                            SOC Analyst
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>Core Expertise</span>
+
+                <h2>My Key Skills</h2>
+
+                <p>
+                    Three areas I am actively developing for my
+                    cybersecurity career.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <!-- Network Security -->
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🛡
+                    </div>
+
+                    <h3>Network Security</h3>
+
+                    <p>
+                        Understanding network architecture, protocols,
+                        traffic monitoring, security controls,
+                        firewalls and defensive security concepts.
+                    </p>
+
+                </div>
+
+
+                <!-- SOC Analyst -->
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🖥
+                    </div>
+
+                    <h3>SOC Analyst</h3>
+
+                    <p>
+                        Learning security monitoring, alert analysis,
+                        log investigation, threat detection and
+                        incident response for Blue Team operations.
+                    </p>
+
+                </div>
+
+
+                <!-- DBMS -->
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🗄
+                    </div>
+
+                    <h3>DBMS</h3>
+
+                    <p>
+                        Knowledge of databases, SQL queries,
+                        relational database concepts, data management
+                        and database security fundamentals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TECHNICAL SKILLS
+    ========================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>Technical Stack</span>
+
+                <h2>What I Work With</h2>
+
+            </div>
+
+
+            <div class="technical">
+
+                <div class="skill-line reveal">
+
+                    <div class="skill-name">
+                        <span>Computer Networking</span>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             data-width="80%">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-line reveal">
+
+                    <div class="skill-name">
+                        <span>Cyber Security</span>
+                        <span>75%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             data-width="75%">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-line reveal">
+
+                    <div class="skill-name">
+                        <span>SQL / DBMS</span>
+                        <span>75%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             data-width="75%">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-line reveal">
+
+                    <div class="skill-name">
+                        <span>Operating Systems</span>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             data-width="70%">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-line reveal">
+
+                    <div class="skill-name">
+                        <span>Video Editing</span>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             data-width="70%">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOC ANALYST
+    ========================== -->
+
+    <section class="soc-section" id="soc">
+
+        <div class="soc-content reveal">
+
+            <div class="section-title">
+
+                <span>Career Focus</span>
+
+                <h2>SOC Analyst Journey</h2>
+
+            </div>
+
+            <h3>
+                Preparing for the
+                <span class="gold">Blue Team</span>
+            </h3>
+
+            <p>
+                I am developing practical knowledge in defensive security,
+                security monitoring and threat detection with the goal of
+                becoming a SOC Analyst.
+            </p>
+
+
+            <div class="tool-list">
+
+                <span class="tool">SIEM</span>
+
+                <span class="tool">Log Analysis</span>
+
+                <span class="tool">Network Monitoring</span>
+
+                <span class="tool">Incident Response</span>
+
+                <span class="tool">Threat Detection</span>
+
+                <span class="tool">Windows Security</span>
+
+                <span class="tool">Linux</span>
+
+                <span class="tool">Networking</span>
+
+                <span class="tool">SQL</span>
+
+                <span class="tool">Blue Team</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>Education</span>
+
+                <h2>Academic Journey</h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+
+                    <h3>BSc Computer Science</h3>
+
+                    <span>Modern College of Arts, Commerce and Science, Pune · 2024–Present</span>
+
+                    <p>
+                        Currently pursuing a BSc in Computer Science.
+                        Expected graduation: 2027.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item reveal">
+
+                    <h3>HSC — Science (General Group)</h3>
+
+                    <span>National Marathi High School, Sillod · 2023</span>
+
+                    <p>
+                        Completed 12th standard in the Science stream
+                        with the General Group.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item reveal">
+
+                    <h3>SSC — School Education</h3>
+
+                    <span>Dnyanvikas Mahavidyalaya, Sillod · 2021</span>
+
+                    <p>
+                        Completed school education at Dnyanvikas Mahavidyalaya, Sillod.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item reveal">
+
+                    <h3>Cybersecurity Learning</h3>
+
+                    <span>Ongoing</span>
+
+                    <p>
+                        Building knowledge in Blue Team security,
+                        SOC operations, network security,
+                        security monitoring and threat detection.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="contact-box reveal">
+
+                <div class="section-title">
+
+                    <span>Let's Connect</span>
+
+                    <h2>Have a Project or Opportunity?</h2>
+
+                    <p>
+                        I am open to networking, learning opportunities,
+                        cybersecurity discussions, internships and
+                        future career opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-buttons"
+                     style="justify-content:center;">
+
+                    <a href="mailto:dhandesominath16@gmail.com"
+                       class="btn btn-primary">
+                        ✉ Email Me
+                    </a>
+
+
+                    <!-- WhatsApp message -->
+                    <a href="https://wa.me/919322586592?text=Hello%20Dhande%20Sominath%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you."
+                       target="_blank"
+                       class="btn btn-outline">
+                        💬 Message Me
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="socials">
+
+                    <!-- Replace these URLs with your actual profiles -->
+
+                    <a class="social"
+                       href="https://www.linkedin.com/"
+                       target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
+
+                    <a class="social"
+                       href="https://www.instagram.com/"
+                       target="_blank" rel="noopener">
+                        Instagram
+                    </a>
+
+                    <a class="social"
+                       href="https://github.com/"
+                       target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+
+                    <a class="social"
+                       href="mailto:dhandesominath16@gmail.com">
+                        Email
+                    </a>
+
+                </div>
+
+
+                <p style="margin-top:30px;">
+                    📍 Pune, Maharashtra
+                    <br>
+                    📧 dhandesominath16@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © <span id="year"></span>
+            Dhande S.
+            All Rights Reserved.
+        </p>
+
+        <p style="margin-top:6px;">
+            Built with HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        /* Close mobile menu after clicking link */
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+        /* =========================
+           CURRENT YEAR
+        ========================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================== */
+
+        const reveals =
+            document.querySelectorAll(".reveal");
+
+        const observer =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("active");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        reveals.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+
+        /* =========================
+           SKILL PROGRESS ANIMATION
+        ========================== */
+
+        const progressBars =
+            document.querySelectorAll(".progress-bar");
+
+
+        const progressObserver =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            const bar = entry.target;
+
+                            bar.style.width =
+                                bar.getAttribute("data-width");
+
+                            progressObserver.unobserve(bar);
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.5
+                }
+
+            );
+
+
+        progressBars.forEach(bar => {
+
+            progressObserver.observe(bar);
+
+        });
+
+
+        /* =========================
+           NAVBAR BACKGROUND
+        ========================== */
+
+        window.addEventListener("scroll", () => {
+
+            const header =
+                document.querySelector("header");
+
+            if (window.scrollY > 50) {
+
+                header.style.background =
+                    "rgba(5,5,5,0.94)";
+
+            } else {
+
+                header.style.background =
+                    "rgba(5,5,5,0.75)";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
